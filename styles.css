@@ -6,6 +6,7 @@
 
 body {
     overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
 }
 
 .modal-cont {
@@ -34,8 +35,8 @@ body {
 
 .modal {
     border-radius: 10px;
-    width: 80%;
-    height: 600px;
+    width: 50%;
+    height: 90%;
     background-color: #fff;
     position: relative;
 }
@@ -46,6 +47,8 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    padding: 1em;
 }
 
 
@@ -222,6 +225,7 @@ form {
 .info-dump :is(h3,p) {
     margin: 1em;
     line-height: 25px;
+    font-size: 1.25em;
 }
 
 .derp {
