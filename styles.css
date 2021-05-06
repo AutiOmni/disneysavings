@@ -536,9 +536,6 @@ form h3 {
 
 @media (max-width: 500px) {
 
-    .hero {
-        height: 90vh;
-    }
 
     .modal {
         width: 100%;
