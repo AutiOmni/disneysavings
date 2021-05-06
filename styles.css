@@ -16,6 +16,7 @@ body {
     height: 100vh;
     position: relative;
     margin-bottom: 3em;
+    overflow-x: hidden;
 }
 
 .hero h1 {
@@ -85,15 +86,6 @@ body {
     transform: scale(.98)
 }
 
-.coa {
-    margin-top: 5em;
-    width: 100vw;
-    height: 50vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: top;
-}
-
 .photo-cont {
     height: 500px;
     width: 60%;
@@ -109,16 +101,6 @@ body {
     border: 1px solid black;
     border-radius: 12px 12px 0px 0px;
     position: relative;
-}
-
-.main-photo-choice {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px 12px 0px 0px;
-    position: absolute;
-    display: none;
-    background-position: center;
-    background-size: cover;
 }
 
 .main-photo-homes {
@@ -141,14 +123,14 @@ body {
     height: 20%;
     width: 100%;
     display: flex;
-    object-fit: cover;
-    object-position: center;
     overflow: hidden;
 }
 
 .photo-choice-cont img {
+    object-fit: cover;
+    object-position: center;
     height: 100px;
-    width: 200px;
+    width: 20%;
     border: 1px solid black;
     cursor: pointer;
     overflow: hidden;
@@ -179,10 +161,32 @@ body {
     width: 40%;
 }
 
+.info-text-condo {
+    width: 40%;
+   
+}
+
+.info-text-condo-mobile {
+    display: none;
+   
+}
+
 .info-dump :is(h3,p) {
     margin: 1em;
     line-height: 25px;
     font-size: 1.25em;
+}
+
+
+
+.coa {
+    margin-top: 1em;
+    width: 100vw;
+    height: 350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
 }
 
 .derp {
@@ -385,4 +389,225 @@ footer :is(a,p) {
 
 form h3 {
     margin-top: 1.5em;
+}
+
+
+@media (max-width: 1200px) {
+    .hero h1 {
+        font-size: 3em;
+    }
+
+    .inquire-one {
+        position: absolute;
+        z-index: 10;
+        right: 15%;
+        bottom: 10%;
+    }
+
+    footer {
+        height: 100px;
+        text-align: center;
+    }
+    
+    footer :is(a,p) {
+        font-size: .75em;
+    }
+
+    form {
+        font-size: .75em;
+    }
+    
+    input {
+        width: 175px;
+    }
+
+    .close-modal {
+        padding: 5px 10px;
+        border: 0;
+        font-size: 1em;
+    }
+
+    .modal h2 {
+        font-size: 1em;
+    }
+    
+}
+
+@media (max-width:900px) {
+    form {
+        font-size: .7em;
+    }
+    input {
+        width: 150px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .modal {
+        width: 60%;
+    }
+
+    .close-modal {
+        font-size: 1em;
+    }
+
+    form {
+        font-size: .75em;
+    }
+
+    input {
+        width: 150px;
+    }
+
+    label {
+        margin: 5px;
+    }
+
+    #pool {
+        width: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .kingdom {
+        background-position: center;
+
+    }
+
+    .hero span {
+        margin-left: 50%;
+    }
+
+    .inquire-one {
+        position: absolute;
+        z-index: 10;
+        right: 15%;
+        bottom: 10%;
+    }
+
+    .inquire-btn {
+        font-size: 1em;
+        border-radius: 10px;
+        padding: 20px 25px;
+    }
+
+    .coa {
+        height: 900px;
+        width: 100vw;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .derp img {
+        height: 100px;
+        width: 150px;
+    }
+    
+    .center {
+        margin-top: 1em;
+        width: 100%;
+        height: 200px;
+        opacity: 1;
+        border-left: none;
+        border-right: none;
+        transform: translate(0%);
+    }
+    
+    .left {
+        transform: translate(0%);
+        margin-top: 1em;
+        width: 100%;
+        height: 200px;
+        opacity: 1;
+    
+    }
+    
+    .right {
+        transform: translate(0%);
+        margin-top: 1em;
+        width: 100%;
+        height: 200px;
+        opacity: 1;
+    }
+    
+}
+
+@media (max-width: 500px) {
+
+    .modal {
+        width: 100%;
+    }
+
+
+    .hero h1 {
+        margin-top: 3em;
+        font-size: 1.5em;
+    }
+
+    .hero span {
+        margin-left: 50%;
+    }
+
+    .inquire-one {
+        position: absolute;
+        z-index: 10;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10%;
+    }
+
+    .inquire-btn {
+        font-size: 1em;
+        padding: 20px 25px;
+    }
+
+
+    .photo-cont {
+        width: 100%;
+    }
+
+    .main-photo {
+        width: 100%;
+    }
+
+    .info-text {
+        width: 100%;
+    }
+
+    .info-text-condo {
+        display: none;
+    }
+
+    .info-text-condo-mobile {
+        display: block;
+    }
+
+    .info-dump {
+        margin: 1em 0em;
+        flex-direction: column;
+    }
+    
+    .info-dump :is(h3,p) {
+        font-size: 1.15em;
+    }
+
+    footer {
+        height: 100px;
+        text-align: center;
+    }
+    
+    footer :is(a,p) {
+        font-size: .5em;
+    }
+
+}
+
+@media (max-width: 350px) {
+    .hero h1 {
+        font-size: 1.25em;
+    }
 }
