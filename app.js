@@ -64,14 +64,15 @@ for (const btn of inqBtn) {
 
 const photoChoices = document.querySelectorAll('.photo-choices')
 
-const mainPhoto = document.querySelectorAll('.main-photo-display')
+const mainPhoto = document.querySelectorAll('.main-photo-choice')
 
 function pictureChoiceDisplay() {
     for (photos of photoChoices) {
-        photos.addEventListener('click', function(e) {
+        photos.addEventListener('mouseover', function(e) {
             if (e.target.classList.contains('photo-choices')) {
                 var source = e.target.getAttribute('src')
-                e.target.parentElement.previousElementSibling.style.backgroundImage = `url(${source})`
+                var pic = e.target.parentElement.previousElementSibling
+                pic.style.backgroundImage = `url(${source})`
             }
         })
     }

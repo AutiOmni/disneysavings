@@ -75,7 +75,7 @@ form {
 }
 
 .kingdom {
-    background-image: url(kingdom.png);
+    background-image: url(imgs/kingdom.jpg);
     background-size: cover;
     background-position: right;
     width: 75vw;
@@ -148,20 +148,31 @@ form {
     height: 80%;
     border: 1px solid black;
     border-radius: 12px 12px 0px 0px;
+    position: relative;
+}
+
+.main-photo-choice {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px 12px 0px 0px;
+    position: absolute;
+    display: none;
+    background-position: center;
+    background-size: cover;
 }
 
 .main-photo-homes {
-    background-image: url(homes/house1.jpg);
+    background-image: url(home/home.jpeg);
     background-position: center;
     background-size: cover;
 }
 .main-photo-condo {
-    background-image: url(homes/house3.jpg);
+    background-image: url(condo/condo.jpeg);
     background-position: center;
     background-size: cover;
 }
 .main-photo-resort {
-    background-image: url(homes/house5.jpg);
+    background-image: url(resort/resort.png);
     background-position: center;
     background-size: cover;
 }
