@@ -1,3 +1,5 @@
+// PHOTO SLIDER
+
 const slides = document.querySelectorAll('.slide')
 const container = document.getElementById('slideshow')
 
@@ -11,6 +13,7 @@ function run() {
 }
 
 
+
 function changeImg() {
     if (idx > slides.length - 1) {
         idx = 0
@@ -20,6 +23,7 @@ function changeImg() {
     container.style.transform = `translateX(${idx * -100}%)`
 }
 
+// MODAL POP UP
 
 const coa = document.querySelector('.coa')
 const derp = document.querySelectorAll('.derp')
@@ -48,14 +52,29 @@ for (const btn of inqBtn) {
         modal.classList.add('showed')
     })
 }
-/*
- inqBtn.addEventListener('click', () => {
-     modal.classList.add('showed')
- })
-*/
+
+
  closeModal.addEventListener('click', () => {
     modal.classList.remove('showed')
  })
 
 
 
+// PHOTO CHOICE SELECT
+
+const photoChoices = document.querySelectorAll('.photo-choices')
+
+const mainPhoto = document.querySelectorAll('.main-photo-display')
+
+function pictureChoiceDisplay() {
+    for (photos of photoChoices) {
+        photos.addEventListener('click', function(e) {
+            if (e.target.classList.contains('photo-choices')) {
+                var source = e.target.getAttribute('src')
+                e.target.parentElement.previousElementSibling.style.backgroundImage = `url(${source})`
+            }
+        })
+    }
+}
+
+pictureChoiceDisplay()
