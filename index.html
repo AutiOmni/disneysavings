@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Disney Savings</title>
+</head>
+<body>
+
+    <div class="modal-cont" id="modal-cont">
+        
+        <div class="modal">
+        <button id="close-modal" class="close-modal">X</button>
+        <div class="form-cont">
+            <form action="mailto:@austin.olijar@gmail.com" method="POST">
+    
+                <div class="form-flex">
+                    <div class="form-name">
+                        <input type="text" id='name' name="name" required placeholder="Name">
+                    </div>
+
+                    <div class="form-bedrooms">
+                                <label for="bedrooms">Bedrooms:</label>
+                                <select name="bedrooms" id="bedrooms" name="bedrooms">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5+</option>
+                                </select>
+                    </div>
+
+                    
+                </div>
+
+            <div class="form-flex">
+    
+                <div class="form-start-date">
+                <label class="start-date" for="start-date">Arrival Date:</label>
+                <input type="date" id='start-date' name="start-date" required placeholder="Arrival">
+                </div>
+    
+                <div class="form-end-date">
+                <label class="end-date" for="end-date">Checkout Date:</label>
+                <input type="date" id='end-date' name="end-date" required>
+                </div>
+
+            </div>
+    
+            
+            <div class="form-flex">
+    
+                <div class="form-distance">
+                    <label for="distance">Distance From Parks:</label>
+                    <input type="range" id='distance' name="distance" step="5" min="5" max="50" required>
+                </div>
+    
+                <div class="form-pool">
+                <label for="pool">Pool:</label>
+                <span>Yes</span><input type="radio" id='pool' name="pool" value="yes" required> 
+                <span>No</span><input type="radio" id='pool' name="pool" value="no" required>
+                </div>
+    
+            </div>
+            <h3>How May We Reach You?</h3>
+            <div class="form-flex">
+                
+                <div class="form-contact">
+                    <label for="pool">Email:</label>
+                    <input type="email" name="email" id="email">
+                    </div>
+
+                    <div>
+                        <label for="pool">Phone:</label>
+                        <input type="text" name="phone" id="phone">
+                    </div>
+
+            </div>
+
+            <input type="button" name="submit" value="submit" id="sub-but">
+            </form>
+        </div>
+    
+    
+    
+        </div>
+    </div>
+
+    <section class="hero">
+        <h1>Become The Magic Kingdoms<span>Nextdoor Neighbor</span></h1>
+        <button class="inquire-one inquire-btn inquire" id="inquire">Inquire Now</button>
+       <div class="kingdom"></div>
+       <div class="slideshow" id="slideshow">
+           <img class="slide" src="homes/house1.jpg" alt="">
+           <img class="slide" src="homes/house2.jpg" alt="">
+           <img class="slide" src="homes/house3.jpg" alt="">
+           <img class="slide" src="homes/house4.jpg" alt="">
+           <img class="slide" src="homes/house5.jpg" alt="">
+    
+       </div>
+    </section>
+
+    <section class="types">
+
+        <div  class="info-dump">
+            <img src="homes/house1.jpg" alt="">
+            <div>
+            <h3>Home Stays</h3>
+            <p>Perfect for family vacations, reunions, or company retreats. We have spacious and private home just minutes away from Orlando's theme parks and world renowned dining attractions.</p>
+            </div>
+        </div>
+
+        <div  class="info-dump">
+            <div >
+                <h3>Condos</h3>
+                <p>Comfortable condominumns for any guestlist. Community pools and amenities make renting a condo the perfect getaway choice.</p>
+            </div>
+            <img src="homes/house3.jpg" alt="">
+        </div>
+
+        <div  class="info-dump">
+            <img src="homes/house5.jpg" alt="">
+            <div>
+            <h3>Resorts</h3>
+            <p>Experience the best resorts Orlando has to offer. The luxury, comfort, and close proximity to popular area attractions make Orlando's resorts something magical.</p>
+            </div>
+      </p>
+        </div>
+        
+    </section>
+
+    <section class="coa">
+        <div class="derp left">
+        <img src="money.png" alt="">
+        <h2>Affordable Stays</h2>
+        <p>Save your money for the souvenirs! We have home stays avaiable for any budget. Make those ever lasting memories without breaking the bank.</p>
+        </div>
+        <div class="derp center">
+            <img src="trust.png" alt="">
+            <h2>Trusted Service</h2>
+            <p>We only work with the most respected and trusted renters in the Orlando area. You'll speak one on one with an actual human being before making a booking.</p>
+        </div>
+        <div class="derp right">
+            <img src="concierge.png" alt="">
+            <h2>Catered To Your Needs</h2>
+            <p>Not a fan of packed and noisy hotels? The lack of privacy? Crowded public pools? Neither are we. Rest comfortably and carefree during your stay in the home of your dreams.</p>
+        </div>
+    </section>
+
+
+
+    <section class='final-coa'>
+        <button class="inquire inquire-btn" id="inquire-two">Inquire Now</button>
+    </section>
+
+    <footer>
+        <p>Disney Savings is not associated or endorsed by Disney World, SeaWorld, or Comcast NBCUniversal. As to Disney artwork, logos, and properties: © Disney.</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/44e20fa782.js" crossorigin="anonymous"></script>
+
+    <script src="app.js"></script>
+</body>
+</html>
