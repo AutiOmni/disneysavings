@@ -518,7 +518,6 @@ form h3 {
     }
     
     .left {
-       
         margin-top: 1em;
         width: 100%;
         height: 200px;
@@ -527,7 +526,6 @@ form h3 {
     }
     
     .right {
-        
         margin-top: 1em;
         width: 100%;
         height: 200px;
@@ -537,6 +535,10 @@ form h3 {
 }
 
 @media (max-width: 500px) {
+
+    .hero {
+        height: 90vh;
+    }
 
     .modal {
         width: 100%;
