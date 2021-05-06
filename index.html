@@ -20,7 +20,8 @@
     
                 <div class="form-flex">
                     <div class="form-name">
-                        <input type="text" id='name' name="name" required placeholder="Name">
+                        <label for="name">Name:</label>
+                        <input type="text" id='name' name="name" required>
                     </div>
 
                     <div class="form-bedrooms">
@@ -41,7 +42,7 @@
     
                 <div class="form-start-date">
                 <label class="start-date" for="start-date">Arrival Date:</label>
-                <input type="date" id='start-date' name="start-date" required placeholder="Arrival">
+                <input type="date" id='start-date' name="start-date" required>
                 </div>
     
                 <div class="form-end-date">
@@ -56,7 +57,8 @@
     
                 <div class="form-distance">
                     <label for="distance">Distance From Parks:</label>
-                    <input type="range" id='distance' name="distance" step="5" min="5" max="50" required>
+                    <input type="range" id='distance' name="distance" value="" step="5" min="5" max="50" required>
+                    <output id="distance-amount" name="amount" for="distance">0 miles</output>
                 </div>
     
                 <div class="form-pool">
@@ -66,22 +68,25 @@
                 </div>
     
             </div>
+
+
+
             <h3>How May We Reach You?</h3>
             <div class="form-flex">
                 
                 <div class="form-contact">
                     <label for="pool">Email:</label>
-                    <input type="email" name="email" id="email" placeholder="Email@home.com">
+                    <input type="email" name="email" id="email">
                     </div>
 
                     <div>
                         <label for="pool">Phone:</label>
-                        <input type="text" name="phone" id="phone" placeholder="+1 555-5555">
+                        <input type="text" name="phone" id="phone">
                     </div>
 
             </div>
 
-            <input type="submit" name="submit" value="submit" id="sub-but" enctype="text">
+            <button class="submit">Submit</button>
             </form>
         </div>
     

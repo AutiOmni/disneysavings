@@ -79,3 +79,12 @@ function pictureChoiceDisplay() {
 }
 
 pictureChoiceDisplay()
+
+
+const slider = document.getElementById('distance')
+const sliderOut = document.getElementById('distance-amount')
+
+
+    slider.addEventListener('click', () => {
+        sliderOut.innerText = `${slider.value} miles`
+    })
