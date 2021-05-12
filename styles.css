@@ -293,7 +293,10 @@ form {
 
 .modal h2 {
     text-align: center;
-    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: #46a3ce;
+    border-radius: 10px 10px 0 0;
 }
 
 .form-cont {
@@ -329,6 +332,18 @@ input {
     border-bottom: 2px black solid;
 }
 
+input:focus,
+    input:active {
+        outline: none;
+    }
+
+input[type=range] {
+    cursor: pointer;
+}
+input[type=date] {
+    cursor: pointer;
+}
+
 label {
     margin: 15px;
 }
@@ -342,7 +357,6 @@ label {
 #pool {
     width: 50px;
     cursor: pointer;
-    
 }
 
 
