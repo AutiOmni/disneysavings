@@ -474,7 +474,7 @@ form h3 {
 
     .kingdom {
         background-position: center;
-
+        clip-path: polygon(0 0, 75% 0, 75% 100%, 0% 100%);
     }
 
     .hero span {
@@ -556,8 +556,9 @@ form h3 {
     }
 
     .hero span {
-        margin-left: 27%;
+        margin-left: 17%;
         margin-top: 65vh;
+        font-size: 1em;
     }
 
     .inquire-one {
@@ -565,7 +566,7 @@ form h3 {
         z-index: 10;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 0%;
+        bottom: 2.5%;
     }
 
     .inquire-btn {
