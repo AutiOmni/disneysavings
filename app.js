@@ -88,3 +88,22 @@ const sliderOut = document.getElementById('distance-amount')
     slider.addEventListener('input', () => {
         sliderOut.innerText = `${slider.value} miles`
     })
+
+    // form validation
+
+    const contactEmail = document.getElementById('email')
+    const contactPhone = document.getElementById('phone')
+    const submitBtn = document.getElementById('submit-form')
+
+    function mySubmitFunction(e) {
+        e.preventDefault();
+        alert('Please provide an Email or Phone Number.')
+        return false;
+    }
+
+    submitBtn.addEventListener('click', (e) => {
+        if (contactEmail.value === '' && contactPhone.value === '') {
+         mySubmitFunction(e)
+        }
+    })
+
