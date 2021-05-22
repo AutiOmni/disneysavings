@@ -247,6 +247,9 @@ body {
 }
 
 
+/* ---------------- MODAL CONTENT -------------------- */
+
+
 .modal-cont {
     position: fixed;
     width: 100vw;
@@ -260,14 +263,15 @@ body {
 
 .close-modal {
     position: absolute;
-    color: red;
+    color: #ee2e2e;
     right: 10px;
-    top: 10px;
+    top: 5px;
     cursor: pointer;
     border-radius: 50%;
     padding: 5px 10px;
     border: 0;
     font-size: 1.25em;
+    font-weight: bolder;
 }
 
 .showed {
@@ -277,18 +281,9 @@ body {
 .modal {
     border-radius: 10px;
     width: 50%;
-    height: 90%;
+    height: 95%;
     background-color: #fff;
     position: relative;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 1em;
 }
 
 .modal h2 {
@@ -299,9 +294,20 @@ form {
     border-radius: 10px 10px 0 0;
 }
 
+/* ---------------- FORM -------------------- */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: .5em 1em;
+}
+
 .form-cont {
     width: 100%;
-    height: 90%;
+    height: 95%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -342,10 +348,29 @@ input[type=range] {
 }
 input[type=date] {
     cursor: pointer;
+    text-align: center;
+}
+
+input[type=checkbox] {
+  margin: 0;
+  width: 10%;
+}
+
+.interested-h3 {
+    margin-bottom: 10px;
+}
+
+.choice-stay {
+    width: 100%;
+    text-align: center;
+}
+.choice-stay label {
+    margin-right: 0;
+    margin-left: 40px;
 }
 
 label {
-    margin: 15px;
+    margin: 10px;
 }
 
 .form-distance {
@@ -359,7 +384,6 @@ label {
     cursor: pointer;
 }
 
-
 .final-coa {
     display: relative;
     height: 25vh;
@@ -368,6 +392,27 @@ label {
     align-items: center;
     justify-content: center;
 }
+
+.submit {
+    font-size: 1.5em;
+    padding: 10px 25px;
+    margin-bottom: 25px;
+    background-color: #fff3af;
+    border-radius: 10px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.submit:active {
+    transform: scale(.98)
+}
+
+form h3 {
+    margin-top: 1.5em;
+}
+
+
+/* ---------------- FOOTER -------------------- */
 
 
 footer {
@@ -388,23 +433,23 @@ footer :is(a,p) {
     margin: 10px;
 }
 
-.submit {
-    font-size: 1.5em;
-    padding: 10px 25px;
-    background-color: #fff3af;
-    border-radius: 10px;
-    border: 1px solid black;
-    cursor: pointer;
+footer {
+    height: 100px;
+    width: 100vw;
+    background-color: gray;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.submit:active {
-    transform: scale(.98)
+footer :is(a,p) {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px;
 }
-
-form h3 {
-    margin-top: 1.5em;
-}
-
 
 @media (max-width: 1200px) {
     .hero h1 {
@@ -480,7 +525,7 @@ form h3 {
     }
 
     #pool {
-        width: 15px;
+        width: 30px;
     }
 
     .hero h1 {
@@ -631,10 +676,25 @@ form h3 {
         font-size: .5em;
     }
 
+    input[type=checkbox] {
+        margin: 0;
+        width: 5%;
+      }
+      
+      .choice-stay label {
+          margin-right: 0;
+          margin-left: 20px;
+      }
+
 }
 
 @media (max-width: 350px) {
-    .hero h1 {
-        font-size: 1.25em;
-    }
+
+        .modal {
+            height: 100%;
+        }
+
+        .hero h1 {
+            font-size: 1.25em;
+         }
 }

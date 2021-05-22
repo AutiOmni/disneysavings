@@ -85,6 +85,6 @@ const slider = document.getElementById('distance')
 const sliderOut = document.getElementById('distance-amount')
 
 
-    slider.addEventListener('click', () => {
+    slider.addEventListener('input', () => {
         sliderOut.innerText = `${slider.value} miles`
     })

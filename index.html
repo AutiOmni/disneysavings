@@ -8,669 +8,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Disney Savings</title>
-    <style>
-        * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-/* ------------------ HERO ---------------- */
-
-.hero {
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    margin-bottom: 3em;
-    overflow-x: hidden;
-}
-
-.hero h1 {
-    margin-top: 1.5em;
-    font-size: 5em;
-    color: #fff;
-    text-shadow: -1px -1px 5px black;
-    position: relative;
-    z-index: 10;
-}
-
-.hero span {
-    margin-left: 40vw;
-    margin-top: .5em;
-    font-size: .75em;
-    display: block;
-}
-
-.kingdom {
-    background-image: url(imgs/kingdom.jpg);
-    background-size: cover;
-    background-position: right;
-    width: 75vw;
-    height: 100%;
-    border: 1px solid black;
-    position: absolute;
-    left: 0;
-    clip-path: polygon(0 0, 75% 0, 65% 100%, 0% 100%);
-    z-index: 2;
-}
-
-.slideshow {
-    width: 60vw;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    display: flex;
-    transition: all ease-in-out 750ms;
-}
-
-.slideshow img {
-    width: 60vw;
-    border: 1px solid black;
-}
-
-.inquire-btn {
-    background-color: #46a3ce;
-    color: #fff;
-    border: 1px solid black;
-    font-size: 1.5em;
-    border-radius: 10px;
-    padding: 20px 25px;
-}
-
-.inquire-one {
-    position: absolute;
-    z-index: 10;
-    right: 20%;
-    bottom: 15%;
-}
-
-.inquire-btn:hover {
-    cursor: pointer;
-}
-
-.inquire-btn:active {
-    transform: scale(.98)
-}
-
-
-/* ------------------ COA - photos ---------------- */
-
-.photo-cont {
-    height: 500px;
-    width: 60%;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.main-photo {
-    width: 100%;
-    height: 80%;
-    border: 1px solid black;
-    border-radius: 12px 12px 0px 0px;
-    position: relative;
-}
-
-.main-photo-homes {
-    background-image: url(home/home.jpeg);
-    background-position: center;
-    background-size: cover;
-}
-.main-photo-condo {
-    background-image: url(condo/condo.jpeg);
-    background-position: center;
-    background-size: cover;
-}
-.main-photo-resort {
-    background-image: url(resort/resort.png);
-    background-position: center;
-    background-size: cover;
-}
-
-.photo-choice-cont {
-    height: 20%;
-    width: 100%;
-    display: flex;
-    overflow: hidden;
-}
-
-.photo-choice-cont img {
-    object-fit: cover;
-    object-position: center;
-    height: 100px;
-    width: 20%;
-    border: 1px solid black;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all ease-in-out 250ms;
-}
-
-.photo-choice-cont img:hover {
-    transform: scale(1.2)
-}
-
-.first-choice {
-    border-radius: 0px 0px 0px 10px;
-}
-
-.last-choice {
-    border-radius: 0px 0px 10px 0px;
-}
-
-.info-dump {
-    margin: 1em 3em;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 500px;
-}
-
-.info-text {
-    width: 40%;
-}
-
-.info-text-condo {
-    width: 40%;
-}
-
-.info-text-condo-mobile {
-    display: none;
-}
-
-.info-dump :is(h3,p) {
-    margin: 1em;
-    line-height: 25px;
-    font-size: 1.25em;
-}
-
-.coa {
-    margin-top: 1em;
-    width: 100vw;
-    height: 350px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    overflow-x: hidden;
-}
-
-.derp {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-}
-
-.derp img {
-    height: 150px;
-    width: 150px;
-}
-
-.derp :is(h2,p) {
-    padding: 10px;
-    letter-spacing: 0.5px;
-    line-height: 20px;
-}
-
-.center {
-    margin-top: 2.5em;
-    width: 33.33%;
-    height: 50%;
-    transform: translate(0%, 100%);
-    transition: all ease 1000ms;
-    opacity: 0;
-    border-left: 1px solid rgb(160, 160, 160);
-    border-right: 1px solid rgb(160, 160, 160);
-    padding: 10px;
-}
-
-.left {
-    transform: translate(-120%, 0%);
-    margin-top: 2.5em;
-    width: 33.33%;
-    height: 50%;
-    transition: all ease 1000ms;
-    opacity: 0;
-    padding: 10px;
-
-}
-
-.right {
-    transform: translate(120%, 0%);
-    margin-top: 2.5em;
-    width: 33.33%;
-    height: 50%;
-    transition: all ease 1000ms;
-    opacity: 0;
-    padding: 10px;
-}
-
-.show {
-    transform: translate(0%, 0%);
-    opacity: 1;
-}
-
-
-.modal-cont {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    z-index: 99;
-    background-color:rgb(0, 0, 0, 0.5);
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-
-.close-modal {
-    position: absolute;
-    color: red;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    padding: 5px 10px;
-    border: 0;
-    font-size: 1.25em;
-}
-
-.showed {
-    display: flex;
-}
-
-.modal {
-    border-radius: 10px;
-    width: 50%;
-    height: 90%;
-    background-color: #fff;
-    position: relative;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 1em;
-}
-
-.modal h2 {
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    background-color: #46a3ce;
-    border-radius: 10px 10px 0 0;
-}
-
-.form-cont {
-    width: 100%;
-    height: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.form-flex {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 20%;
-    width: 100%;
-    text-align: center;
-}
-
-.end-date, 
-    .start-date {
-        display: block;
-}
-
-select {
-    font-size: 1.5em;
-}
-
-input {
-    width: 200px;
-    font-size: 1.5em;
-    border: none;
-    border-bottom: 2px black solid;
-}
-
-input:focus,
-    input:active {
-        outline: none;
-    }
-
-input[type=range] {
-    cursor: pointer;
-}
-input[type=date] {
-    cursor: pointer;
-}
-
-label {
-    margin: 15px;
-}
-
-.form-distance {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#pool {
-    width: 50px;
-    cursor: pointer;
-}
-
-
-.final-coa {
-    display: relative;
-    height: 25vh;
-    width: 100vw;
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-}
-
-
-footer {
-    height: 100px;
-    width: 100vw;
-    background-color: gray;
-    color: #fff;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-footer :is(a,p) {
-    color: #fff;
-    text-decoration: none;
-    margin: 10px;
-}
-
-.submit {
-    font-size: 1.5em;
-    padding: 10px 25px;
-    background-color: #fff3af;
-    border-radius: 10px;
-    border: 1px solid black;
-    cursor: pointer;
-}
-
-.submit:active {
-    transform: scale(.98)
-}
-
-form h3 {
-    margin-top: 1.5em;
-}
-
-
-@media (max-width: 1200px) {
-    .hero h1 {
-        font-size: 3em;
-    }
-
-    .inquire-one {
-        position: absolute;
-        z-index: 10;
-        right: 15%;
-        bottom: 10%;
-    }
-
-    footer {
-        height: 100px;
-        text-align: center;
-    }
-    
-    footer :is(a,p) {
-        font-size: .75em;
-    }
-
-    form {
-        font-size: .75em;
-    }
-    
-    input {
-        width: 175px;
-    }
-
-    .close-modal {
-        padding: 5px 10px;
-        border: 0;
-        font-size: 1em;
-    }
-
-    .modal h2 {
-        font-size: 1em;
-    }
-    
-}
-
-@media (max-width:900px) {
-    form {
-        font-size: .7em;
-    }
-    input {
-        width: 150px;
-    }
-}
-
-
-@media (max-width: 800px) {
-
-    .modal {
-        width: 60%;
-    }
-
-    .close-modal {
-        font-size: 1em;
-    }
-
-    form {
-        font-size: .75em;
-    }
-
-    input {
-        width: 150px;
-    }
-
-    label {
-        margin: 5px;
-    }
-
-    #pool {
-        width: 15px;
-    }
-
-    .hero h1 {
-        font-size: 2em;
-    }
-
-    .kingdom {
-        background-position: center;
-        clip-path: polygon(0 0, 75% 0, 75% 100%, 0% 100%);
-    }
-
-    .hero span {
-        margin-left: 50%;
-    }
-
-    .inquire-one {
-        position: absolute;
-        z-index: 10;
-        right: 15%;
-        bottom: 10%;
-    }
-
-    .inquire-btn {
-        font-size: 1em;
-        border-radius: 10px;
-        padding: 20px 25px;
-    }
-
-    .coa {
-        height: 900px;
-        width: 100vw;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
-    
-    .derp img {
-        height: 100px;
-        width: 150px;
-    }
-    
-    .center {
-        margin-top: 1em;
-        width: 100%;
-        height: 200px;
-        opacity: 1;
-        border-left: none;
-        border-right: none;
-      
-    }
-    
-    .left {
-        margin-top: 1em;
-        width: 100%;
-        height: 200px;
-        opacity: 1;
-    
-    }
-    
-    .right {
-        margin-top: 1em;
-        width: 100%;
-        height: 200px;
-        opacity: 1;
-    }
-    
-}
-
-@media (max-width: 500px) {
-
-    .modal {
-        width: 100%;
-    }
-
-    .hero {
-        height: 85vh;
-    }
-
-    .kingdom {
-        margin-top: 4em;
-        height: 60vh;
-    }
-
-    .slideshow {
-        margin-top: 4em;
-        height: 60vh;
-    }
-
-    .hero h1 {
-        margin-top: 1em;
-        font-size: 1.5em;
-        text-shadow: 1px 1px 2px black;
-    }
-
-    .hero span {
-        margin-left: 17%;
-        margin-top: 60vh;
-        font-size: 1em;
-    }
-
-    .inquire-one {
-        position: absolute;
-        z-index: 10;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0%;
-    }
-
-    .inquire-btn {
-        font-size: 1em;
-        padding: 20px 25px;
-    }
-
-    .photo-cont {
-        width: 100%;
-    }
-
-    .main-photo {
-        width: 100%;
-    }
-
-    .info-text {
-        width: 100%;
-    }
-
-    .info-text-condo {
-        display: none;
-    }
-
-    .info-text-condo-mobile {
-        display: block;
-    }
-
-    .info-dump {
-        margin: 1em 0em;
-        flex-direction: column;
-    }
-    
-    .info-dump :is(h3,p) {
-        font-size: 1.15em;
-    }
-
-    footer {
-        height: 100px;
-        text-align: center;
-    }
-    
-    footer :is(a,p) {
-        font-size: .5em;
-    }
-
-}
-
-@media (max-width: 350px) {
-    .hero h1 {
-        font-size: 1.25em;
-    }
-}
-    </style>
 </head>
 <body>
+
+    <!---------------------- MODAL CONTENT ------------------------------->
 
     <div class="modal-cont" id="modal-cont">
         
         <div class="modal">
 
-        <button id="close-modal" class="close-modal">X</button>
-        <h2>Disney Savings Inquiry Form</h2>
+            <button id="close-modal" class="close-modal">X</button>
 
-        <div class="form-cont">
+            <h2>Disney Savings Inquiry Form</h2>
 
-            <form action="https://formspree.io/f/xzbydono" method="POST" id='form'>
+                <div class="form-cont">
+
+                    <form action="https://formspree.io/f/xzbydono" method="POST" id='form'>
     
                 <div class="form-flex">
+
                     <div class="form-name">
                         <label for="name">Name:</label>
                         <input type="text" id='name' name="name" required>
                     </div>
 
                     <div class="form-bedrooms">
+
                                 <label for="bedrooms">Bedrooms:</label>
                                 <select name="bedrooms" id="bedrooms" name="bedrooms">
                                     <option value="1">1</option>
@@ -680,80 +44,99 @@ form h3 {
                                     <option value="5">5+</option>
                                 </select>
                     </div>
+                </div>
 
+                 <div class="form-flex">
                     
-                </div>
+                    <div class="form-start-date">
+                    <label class="start-date" for="start-date">Arrival Date:</label>
+                    <input type="date" id='start-date' name="start-date" required>
+                    </div>
+        
+                    <div class="form-end-date">
+                    <label class="end-date" for="end-date">Checkout Date:</label>
+                    <input type="date" id='end-date' name="end-date" required>
+                    </div>
 
-            <div class="form-flex">
-    
-                <div class="form-start-date">
-                <label class="start-date" for="start-date">Arrival Date:</label>
-                <input type="date" id='start-date' name="start-date" required>
                 </div>
-    
-                <div class="form-end-date">
-                <label class="end-date" for="end-date">Checkout Date:</label>
-                <input type="date" id='end-date' name="end-date" required>
-                </div>
-
-            </div>
     
             
-            <div class="form-flex">
+                <div class="form-flex mid-form">
     
-                <div class="form-distance">
-                    <label for="distance">Distance From Parks:</label>
-                    <input type="range" id='distance' name="distance" value="5" step="5" min="5" max="50" required>
-                    <output id="distance-amount" name="amount" for="distance">5 miles</output>
-                </div>
-    
-                <div class="form-pool">
-                <label for="pool">Pool:</label>
-                <span>Yes</span><input type="radio" id='pool' name="pool" value="yes" required> 
-                <span>No</span><input type="radio" id='pool' name="pool" value="no" required>
-                </div>
+                    <div class="form-distance">
+                        <label for="distance">Distance From Parks:</label>
+                        <input type="range" id='distance' name="distance" value="5" step="5" min="5" max="50" required>
+                        <output id="distance-amount" name="amount" for="distance">5 miles</output>
+                    </div>
+                    
+                    <div class="form-pool">
+                        <label for="pool">Pool:</label>
+                        <span>Yes</span><input type="radio" id='pool' name="pool" value="yes" required> 
+                        <span>No</span><input type="radio" id='pool' name="pool" value="no" required>
+                    </div>
     
             </div>
 
+            <h3 class="interested-h3">I am interested in . . .</h3>
 
+            <div class="choice-stay">
+                <label for="homes">Homes:</label>
+                <input checked="true" type="checkbox" id='homes' name="stay-choice" value="home"> 
+                <label for="condo">Condos:</label>
+                <input type="checkbox" id='condos' name="stay-choice" value="condo">
+                <label for="resort">Resorts:</label>
+                <input type="checkbox" id='resorts' name="stay-choice" value="resort">
+            </div>
 
             <h3>How May We Reach You?</h3>
+
             <div class="form-flex">
                 
                 <div class="form-contact">
                     <label for="pool">Email:</label>
                     <input type="email" name="email" id="email">
-                    </div>
+                </div>
 
-                    <div>
+                <div>
                         <label for="pool">Phone:</label>
                         <input type="text" name="phone" id="phone">
-                    </div>
+                 </div>
+
+                </div>
+
+                <button class="submit">Submit</button>
+
+                </form>
 
             </div>
-
-            <button class="submit">Submit</button>
-            </form>
-        </div>
-    
-    
-    
         </div>
     </div>
 
+
+        <!---------------------- HERO/PHOTO CAROUSEL CONTENT ------------------------------->
+
+
     <section class="hero">
+
         <h1>Become The Magic Kingdoms<span>Nextdoor Neighbor</span></h1>
+<!----------------------  INQUIRE BUTTON ------------------------------->
         <button class="inquire-one inquire-btn inquire" id="inquire">Inquire Now!</button>
-       <div class="kingdom"></div>
-       <div class="slideshow" id="slideshow">
+
+        <div class="kingdom"></div>
+
+        <div class="slideshow" id="slideshow">
            <img class="slide" src="imgs/house1.jpg" alt="">
            <img class="slide" src="imgs/house2.jpg" alt="">
            <img class="slide" src="imgs/house3.jpg" alt="">
            <img class="slide" src="imgs/house4.jpg" alt="">
            <img class="slide" src="imgs/house5.jpg" alt="">
-    
-       </div>
+        </div>
+
     </section>
+
+
+     <!---------------------- REAL COA CONTENT ------------------------------->
+
 
     <section class="types">
 
@@ -762,9 +145,11 @@ form h3 {
             <div class="photo-cont">
             
                 <div class="main-photo main-photo-homes">
-                    
+             <!----------------------  BACKGROUND IMAGE GENERATION ------------------------------->
                 </div>
             
+
+
                 <div class="photo-choice-cont">
                     <img class="photo-choices first-choice" src="home/home.jpeg" alt="">
                     <img class="photo-choices" src="home/home1.jpeg" alt="">
@@ -775,22 +160,25 @@ form h3 {
 
             </div>
 
+
             <div class="info-text">
-            <h3><strong>Home Stays</strong></h3>
-            <p>Perfect for family vacations, reunions, or company retreats. We have spacious and private homes just minutes away from Orlando's theme parks and world renowned dining attractions.</p>
+                <h3><strong>Home Stays</strong></h3>
+                <p>Perfect for family vacations, reunions, or company retreats. We have spacious and private homes just minutes away from Orlando's theme parks and world renowned dining attractions.</p>
             </div>
+
         </div>
 
         
         <div class="info-dump">
+
             <div class="info-text-condo" >
                 <h3><strong>Condos</strong></h3>
                 <p>Comfortable condominumns for any guestlist. Community pools and amenities make renting a condo the perfect getaway choice.</p>
             </div>
-            <div class="photo-cont">
 
+        <div class="photo-cont">
                 <div class="main-photo main-photo-condo">
-             
+         <!----------------------  BACKGROUND IMAGE GENERATION ------------------------------->
                 </div>
             
                 <div class="photo-choice-cont">
@@ -814,7 +202,7 @@ form h3 {
             <div class="photo-cont">
 
                 <div class="main-photo main-photo-resort">
-                   
+         <!----------------------  BACKGROUND IMAGE GENERATION ------------------------------->
                 </div>
             
                 <div class="photo-choice-cont">
@@ -834,6 +222,9 @@ form h3 {
         </div>
         
     </section>
+
+    <!----------------------  GUARANTEE INFO------------------------------->
+
 
     <section class="coa">
 
@@ -857,17 +248,27 @@ form h3 {
 
     </section>
 
+    <!----------------------  LAST INQUIRE BUTTON ------------------------------->
+
+
     <section class='final-coa'>
         <button class="inquire inquire-btn" id="inquire-two">Inquire Now</button>
     </section>
+
+     <!----------------------  FOOTER ------------------------------->
+
 
     <footer>
         <p>&#169; Disney Savings is not associated or endorsed by Disney World, SeaWorld, or Comcast NBCUniversal. As to Disney artwork, logos, and properties: © Disney.</p>
         <p><a class='privacy' target="_blank" href="https://www.termsfeed.com/live/defbcb23-3191-45c0-bd99-2fc333838159">Privacy Policy</a></p>
     </footer>
 
+
+    <!----------------------  SCRIPTS BELOW ------------------------------->
+
     <script src="https://kit.fontawesome.com/44e20fa782.js" crossorigin="anonymous"></script>
 
     <script src="app.js"></script>
+
 </body>
 </html>
