@@ -346,6 +346,15 @@ input:focus,
 input[type=range] {
     cursor: pointer;
 }
+
+input[type=text] {
+    cursor: pointer;
+    background-color: transparent;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
 input[type=date] {
     cursor: pointer;
     text-align: center;
@@ -354,6 +363,11 @@ input[type=date] {
 input[type=checkbox] {
   margin: 0;
   width: 10%;
+  border-bottom:1px solid #000;
+}
+
+input[type=radio] {
+  border-bottom:1px solid #000;
 }
 
 .interested-h3 {
