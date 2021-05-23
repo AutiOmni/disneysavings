@@ -76,7 +76,7 @@ body {
     position: absolute;
     right: 20%;
     bottom: 15%;
-    z-index: 99;
+    z-index: 11;
 }
 
 .inquire-btn:hover {
