@@ -74,10 +74,9 @@ body {
 
 .inquire-one {
     position: absolute;
-    z-index: 10;
     right: 20%;
     bottom: 15%;
-    z-index: 9;
+    z-index: 99;
 }
 
 .inquire-btn:hover {
