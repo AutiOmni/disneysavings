@@ -344,14 +344,13 @@ input:focus,
     }
 
 input[type=range] {
-    color: red;
     cursor: pointer;
 }
 
 input[type=text] {
     cursor: pointer;
     background-color: #fff;
-    box-shadow: none;
+    box-shadow: none !important;
     border-top: 2px solid #fff;
     border-left: 2px solid #fff;
     border-right: 2px solid #fff;
@@ -373,7 +372,7 @@ input[type=radio] {
   border-bottom:1px solid #000;
 }
 
-.pool {
+.form-pool label {
     cursor: pointer;
 }
 
@@ -401,7 +400,8 @@ label {
     align-items: center;
 }
 
-#pool {
+#poolY,
+    #poolN {
     width: 50px;
     cursor: pointer;
 }
@@ -546,7 +546,8 @@ footer :is(a,p) {
         margin: 5px;
     }
 
-    #pool {
+    #poolY,
+        #poolN {
         width: 30px;
     }
 
