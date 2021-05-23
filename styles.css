@@ -654,7 +654,7 @@ footer :is(a,p) {
         z-index: 10;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 0px;
+        bottom: 15px;
     }
 
     .inquire-btn {
