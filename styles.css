@@ -285,6 +285,7 @@ body {
     height: 95%;
     background-color: #fff;
     position: relative;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .5),-5px -5px 10px rgba(0, 0, 0, .5);
 }
 
 .modal h2 {
