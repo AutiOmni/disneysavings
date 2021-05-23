@@ -344,6 +344,7 @@ input:focus,
     }
 
 input[type=range] {
+    color: red;
     cursor: pointer;
 }
 
@@ -353,6 +354,7 @@ input[type=text] {
     border-top: 2px solid #fff;
     border-left: 2px solid #fff;
     border-right: 2px solid #fff;
+    box-shadow: inset 0px 0px 10px #fff;
 }
 
 input[type=date] {
@@ -693,6 +695,10 @@ footer :is(a,p) {
     input[type=checkbox] {
         margin: 0;
         width: 5%;
+      }
+
+      input[type=radio] {
+        margin: 2.5px;
       }
       
       .choice-stay label {
