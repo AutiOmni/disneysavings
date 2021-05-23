@@ -642,7 +642,7 @@ footer :is(a,p) {
         text-shadow: 1px 1px 2px black;
     }
 
-    .hero span {
+    .hero h1 span {
         margin-top: 1em;
         margin-left: 17%;
         margin-top: 60vh;
@@ -725,4 +725,9 @@ footer :is(a,p) {
         .hero h1 {
             font-size: 1.25em;
          }
+
+         #poolY,
+         #poolN {
+         width: 20px;
+     }
 }
