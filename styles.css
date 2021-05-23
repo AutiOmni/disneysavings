@@ -347,7 +347,8 @@ input[type=range] {
     cursor: pointer;
 }
 
-input[type=text] {
+input[type=text],
+    input[type=email] {
     cursor: pointer;
     background-color: #fff;
     box-shadow: none !important;
@@ -643,9 +644,8 @@ footer :is(a,p) {
     }
 
     .hero h1 span {
-        margin-top: 1em;
         margin-left: 17%;
-        margin-top: 60vh;
+        margin-top: 65vh;
         font-size: 1em;
     }
 
@@ -654,7 +654,7 @@ footer :is(a,p) {
         z-index: 10;
         left: 50%;
         transform: translateX(-50%);
-        bottom: 5%;
+        bottom: 0px;
     }
 
     .inquire-btn {
