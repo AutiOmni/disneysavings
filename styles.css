@@ -350,11 +350,10 @@ input[type=range] {
 input[type=text],
     input[type=email] {
     cursor: pointer;
-    background-color: #fff;
-    box-shadow: none !important;
-    border-top: 2px solid #fff;
-    border-left: 2px solid #fff;
-    border-right: 2px solid #fff;
+    box-shadow: inset 10px 10px 10px #fff !important;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 
 input[type=date] {
