@@ -350,11 +350,11 @@ input[type=range] {
 
 input[type=text] {
     cursor: pointer;
-    background-color: transparent;
+    background-color: #fff;
+    box-shadow: none;
     border-top: 2px solid #fff;
     border-left: 2px solid #fff;
     border-right: 2px solid #fff;
-    box-shadow: inset 0px 0px 10px #fff;
 }
 
 input[type=date] {
@@ -366,10 +366,15 @@ input[type=checkbox] {
   margin: 0;
   width: 10%;
   border-bottom:1px solid #000;
+  cursor: pointer;
 }
 
 input[type=radio] {
   border-bottom:1px solid #000;
+}
+
+.pool {
+    cursor: pointer;
 }
 
 .interested-h3 {
@@ -383,6 +388,7 @@ input[type=radio] {
 .choice-stay label {
     margin-right: 0;
     margin-left: 40px;
+    cursor: pointer;
 }
 
 label {
@@ -694,7 +700,7 @@ footer :is(a,p) {
 
     input[type=checkbox] {
         margin: 0;
-        width: 5%;
+        width: 7.5%;
       }
 
       input[type=radio] {
