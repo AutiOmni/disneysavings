@@ -352,14 +352,14 @@ input[type=text],
     border-top: none;
     border-left: 1px solid #fff;
     border-right:  1px solid #fff;
-    border-bottom: 1px #000 solid;
+    border-bottom: 1px solid #000;
 }
 
 input[type=date] {
     cursor: pointer;
     text-align: center;
     border: none;
-    border-bottom: 1px solid
+    border-bottom: 1px solid #000;
 }
 
 input[type=checkbox] {
