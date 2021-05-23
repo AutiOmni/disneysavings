@@ -510,6 +510,10 @@ footer :is(a,p) {
     .modal h2 {
         font-size: 1em;
     }
+
+    .inquire-one {
+        z-index: 99;
+    }
     
 }
 
