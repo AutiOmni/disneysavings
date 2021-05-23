@@ -335,7 +335,10 @@ input {
     width: 200px;
     font-size: 1.5em;
     border: none;
-    border-bottom: 2px black solid;
+    border-bottom: 1px #000 solid;
+    border-top: 0px transparent solid;
+    borDer-left: 0px transparent solid;
+    border-right: 0px transparent solid;
 }
 
 input:focus,
