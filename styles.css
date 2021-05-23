@@ -644,9 +644,8 @@ footer :is(a,p) {
 
     .hero span {
         margin-left: 17%;
-        margin-top: 65vh;
+        margin-top: 62.5vh;
         font-size: 1em;
-        bottom: 50px;
     }
 
     .inquire-one {
