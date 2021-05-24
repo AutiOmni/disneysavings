@@ -30,7 +30,6 @@ function changeImg() {
 
 // MODAL POP UP
 
-const coa = document.querySelector('.coa')
 const derp = document.querySelectorAll('.derp')
 
 window.addEventListener('scroll', checkBox) 
@@ -39,7 +38,7 @@ function checkBox(){
      const trigger = window.innerHeight / 5 * 3.5
 
      derp.forEach(box => {
-         const boxTop = coa.getBoundingClientRect().top
+         const boxTop = box.getBoundingClientRect().top
          if (boxTop < trigger) {
              box.classList.add('show')
          } else {
