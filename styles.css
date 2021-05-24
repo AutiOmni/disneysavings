@@ -58,9 +58,30 @@ body {
     transition: all ease-in-out 1000ms;
 }
 
-.slideshow img {
+.slide {
     width: 60vw;
     border: 1px solid #000;
+    background-position: center;
+    background-size: cover;
+}
+
+.slide:nth-last-of-type(1) {
+    background-image: url(imgs/house4.jpg);
+}
+.slide:nth-last-of-type(2) {
+    background-image: url(imgs/house3.jpg);
+}
+.slide:nth-last-of-type(3) {
+    background-image: url(imgs/house2.jpg);
+}
+.slide:nth-last-of-type(4) {
+    background-image: url(imgs/house6.jpg);
+}
+.slide:nth-last-of-type(5) {
+    background-image: url(imgs/house1.jpg);
+}
+.slide:nth-last-of-type(5) {
+    background-image: url(imgs/house5.jpg);
 }
 
 .inquire-btn {
