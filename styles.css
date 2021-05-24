@@ -55,7 +55,7 @@ body {
     position: absolute;
     left: 45vw;
     display: flex;
-    transition: all ease-in-out 1000ms;
+    transition: all ease-in 1000ms;
 }
 
 .slideshow img {
