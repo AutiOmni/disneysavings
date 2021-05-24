@@ -12,9 +12,14 @@ function run() {
     changeImg()
 }
 
-
-
 function changeImg() {
+
+    if (idx === slides.length) {
+        container.style.transition = 'none'
+    } else if (idx !== slides.length) {
+        container.style.transition = 'all ease-in-out 750ms'
+    }
+
     if (idx > slides.length - 1) {
         idx = 0
     } else if (idx < 0) {
