@@ -50,8 +50,6 @@ body {
 }
 
 .slideshow {
- 
-    border: 1px solid black;
     height: 100%;
     width: 60vw;
     position: absolute;
