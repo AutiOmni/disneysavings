@@ -213,7 +213,7 @@ body {
     margin-top: 2.5em;
     width: 33.33%;
     height: 50%;
-    transform: translate(0%, 100%);
+    transform: translate(0%, 120%);
     transition: all ease 1000ms;
     opacity: 0;
     border-left: 1px solid rgb(160, 160, 160);
@@ -243,8 +243,8 @@ body {
 }
 
 .show {
-    transform: translate(0%, 0%);
-    opacity: 1;
+    transform: translate(0%, 0%) !important;
+    opacity: 1 !important;
 }
 
 
@@ -581,6 +581,10 @@ footer :is(a,p) {
         padding: 20px 25px;
     }
 
+    .info-dump {
+        margin-bottom: 0;
+    }
+
     .coa {
         height: 900px;
         width: 100vw;
@@ -589,33 +593,34 @@ footer :is(a,p) {
     }
     
     .derp img {
-        height: 100px;
+        height: 150px;
         width: 150px;
     }
     
     .center {
-        margin-top: 1em;
+        margin-top: 1.25em;
         width: 100%;
         height: 200px;
-        opacity: 1;
+        opacity: 0;
         border-left: none;
         border-right: none;
-      
+        transform: translate(120%, 0%);
     }
     
     .left {
-        margin-top: 1em;
+        margin-top: 0em;
         width: 100%;
         height: 200px;
-        opacity: 1;
-    
+        opacity: 0;
     }
     
     .right {
-        margin-top: 1em;
+        margin-top: 1.25em;
         width: 100%;
         height: 200px;
-        opacity: 1;
+        opacity: 0;
+        transform: translate(-120%, 0%);
+
     }
     
 }
@@ -648,8 +653,6 @@ footer :is(a,p) {
     .slideshow img {
         width: 60vw;
     }
-
-
 
     .hero h1 {
         margin-top: .5em;
@@ -697,13 +700,15 @@ footer :is(a,p) {
     }
 
     .info-dump {
-        margin: 1em 0em;
+        margin: 1em 0em 0em 0em;
         flex-direction: column;
     }
     
     .info-dump :is(h3,p) {
         font-size: 1.15em;
     }
+
+
 
     footer {
         height: 100px;
