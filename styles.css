@@ -37,7 +37,7 @@ body {
 }
 
 .kingdom {
-    background-image: url(imgs/kingdom.jpg);
+    background-image: url(imgs/kingdom.png);
     background-size: cover;
     background-position: right;
     width: 75vw;
@@ -642,6 +642,7 @@ footer :is(a,p) {
         width: 360vw;
         height: 60vh;
         left: 40vw;
+        transition: transform linear 500ms;
     }
 
     .slideshow img {
