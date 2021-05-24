@@ -25,7 +25,7 @@ function changeImg() {
     } else if (idx < 0) {
         idx = slides.length - 1
     }
-    container.style.transform = `translateX(${idx * -60}vw)`
+    container.style.transform = `translateX(${idx * -100}%)`
 }
 
 // MODAL POP UP
