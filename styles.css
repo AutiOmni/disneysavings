@@ -350,7 +350,6 @@ input[type=range] {
 
 input[type=text],
     input[type=email] {
-    cursor: pointer;
     box-shadow: inset 10px 10px 10px #fff !important;
     border-top: none;
     border-left: 1px solid #fff;
