@@ -61,6 +61,8 @@ body {
 .slideshow img {
     width: 60vw;
     border: 1px solid black;
+    object-fit: cover;
+    object-position: center;
 }
 
 .inquire-btn {
