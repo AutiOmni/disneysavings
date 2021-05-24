@@ -662,7 +662,7 @@ footer :is(a,p) {
         height: 60vh;
     }
 
-    .slideshow img {
+    .slide {
         width: 65vw;
     }
     
