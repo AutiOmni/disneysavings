@@ -94,7 +94,7 @@ function pictureChoiceDisplay() {
 pictureChoiceDisplay()
 
 
-const slider = document.getElementById('distance')
+const slider = document.getElementById('miles-from-park')
 const sliderOut = document.getElementById('distance-amount')
 
 
