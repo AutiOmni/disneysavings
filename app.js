@@ -50,6 +50,7 @@ function checkBox(){
  const inqBtn = document.querySelectorAll('.inquire')
  const modal = document.getElementById('modal-cont')
  const closeModal = document.getElementById('close-modal')
+ const modalForm = document.querySelector('.modal')
 
 for (const btn of inqBtn) {
     btn.addEventListener('click', () => {
@@ -58,10 +59,16 @@ for (const btn of inqBtn) {
     })
 }
 
+modal.addEventListener('click', function(e) {
+    if (e.target === modal) {
+        document.body.style. overflowY = '';
+        modal.classList.remove('showed')
+    }
+})
 
  closeModal.addEventListener('click', () => {
     modal.classList.remove('showed')
-    document.body.style. overflowY = ''
+    document.body.style. overflowY = '';
  })
 
 
