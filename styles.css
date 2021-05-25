@@ -737,8 +737,8 @@ footer :is(a,p) {
       }
 
       input[type=text] {
-          border-left: 1px solid #fff;
-          border-right: 1px solid #fff;
+          border-left: 2px solid #fff;
+          border-right: 2px solid #fff;
       }
 
       input[type=date] {
