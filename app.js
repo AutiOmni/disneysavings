@@ -54,12 +54,14 @@ function checkBox(){
 for (const btn of inqBtn) {
     btn.addEventListener('click', () => {
         modal.classList.add('showed')
+        document.body.style. overflowY = 'hidden'
     })
 }
 
 
  closeModal.addEventListener('click', () => {
     modal.classList.remove('showed')
+    document.body.style. overflowY = ''
  })
 
 
