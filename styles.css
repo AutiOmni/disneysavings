@@ -544,6 +544,11 @@ footer :is(a,p) {
         margin: 5px;
     }
 
+    .start-date, 
+        .end-date {
+            font-size: .9em;
+    }
+
     #poolY,
         #poolN {
         width: 30px;
@@ -758,6 +763,11 @@ footer :is(a,p) {
 }
 
 @media (max-width: 350px) {
+
+    .start-date, 
+        .end-date {
+            font-size: .9em;
+    }
 
         .modal {
             height: 100%;
