@@ -682,6 +682,14 @@ footer :is(a,p) {
         width: 100%;
     }
 
+    .photo-choices {
+        box-shadow: 10px 10px 10px #000;
+    }
+
+    .photo-choice-cont {
+        border-bottom: 1px solid #000;
+    }
+
     .main-photo {
         width: 100%;
     }
