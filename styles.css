@@ -736,7 +736,8 @@ footer :is(a,p) {
         width: 7.5%;
       }
 
-      input[type=text] {
+    input[type=text],
+    input[type=email] {
           border-left: 2px solid #fff;
           border-right: 2px solid #fff;
       }
