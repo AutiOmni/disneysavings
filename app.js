@@ -4,14 +4,36 @@ const slides = document.querySelectorAll('.slide')
 const container = document.getElementById('slideshow')
 
 
-let idx = 0
+let idx = 3
 let interval = setInterval(run, 3000)
 
-function run() {
-    idx++
-    changeImg()
+function run() { 
+
+    container.style.transition = 'transform linear 1000ms'
+    container.style.transform = 'translateX(-60vw)'
+
+        setTimeout(() => {
+
+            container.removeChild(container.firstElementChild)
+            container.style.transition = 'none'
+            container.style.transform = 'translateX(0vw)'
+
+            const slide = document.createElement('img')
+            slide.classList.add('slide')
+            slide.src = `imgs/house${idx}.png`
+            container.appendChild(slide)
+
+        if (idx === 6) {
+        idx = 1
+        } else {
+            idx++
+        }
+    }, 1500)
 }
 
+
+
+/*
 function changeImg() {
 
     if (idx === slides.length) {
@@ -27,7 +49,7 @@ function changeImg() {
     }
     container.style.transform = `translateX(${idx * -60}vw)`
 }
-
+*/
 // MODAL POP UP
 
 const derp = document.querySelectorAll('.derp')
@@ -108,15 +130,32 @@ const sliderOut = document.getElementById('distance-amount')
     const contactPhone = document.getElementById('phone')
     const submitBtn = document.getElementById('submit-form')
 
+
+   
+
     function mySubmitFunction(e) {
+        phoneNumber(contactPhone.value)
         e.preventDefault();
-        alert('Please provide an Email or Phone Number.')
-        return false;
+        alert('Please provide an Email and Phone Number.')
+       return false;
     }
 
-    submitBtn.addEventListener('click', (e) => {
-        if (contactEmail.value === '' && contactPhone.value === '') {
-         mySubmitFunction(e)
+    function phoneNumber(inputtxt) {
+  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+
+  if(inputtxt.value.match(phoneno)) {
+      return true;
+        } else {
+        return false;
         }
+}
+
+    submitBtn.addEventListener('click', (e) => {
+            
+           if (contactEmail.value === '' || contactPhone.value === '') {
+               mySubmitFunction(e)
+             }
+
+  
     })
 
