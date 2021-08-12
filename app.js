@@ -1,7 +1,8 @@
 // PHOTO SLIDER
 
-const slides = document.querySelectorAll('.slide')
-const container = document.getElementById('slideshow')
+const slides = $('.slide')
+const container = $('#slideshow')
+
 
 
 let idx = 3
@@ -9,19 +10,21 @@ let interval = setInterval(run, 3000)
 
 function run() { 
 
-    container.style.transition = 'transform linear 1000ms'
-    container.style.transform = 'translateX(-60vw)'
+    container.css('transition', 'transform linear 1000ms')
+    container.css('transform', 'translateX(-60vw)')
 
         setTimeout(() => {
 
-            container.removeChild(container.firstElementChild)
-            container.style.transition = 'none'
-            container.style.transform = 'translateX(0vw)'
+            container.find('img:first').remove()
+            container.css('transition', 'none')
+            container.css('transform', 'translateX(0vw)')
 
-            const slide = document.createElement('img')
-            slide.classList.add('slide')
-            slide.src = `imgs/house${idx}.png`
-            container.appendChild(slide)
+            $('<img>', {
+                "class": "slide",
+                "src": `imgs/house${idx}.png`
+            }).appendTo(container)
+
+           
 
         if (idx === 6) {
         idx = 1
@@ -30,6 +33,7 @@ function run() {
         }
     }, 1500)
 }
+
 
 
 
@@ -52,110 +56,109 @@ function changeImg() {
 */
 // MODAL POP UP
 
-const derp = document.querySelectorAll('.derp')
+const derp = $('.derp')
 
-window.addEventListener('scroll', checkBox) 
+$(window).on('scroll', checkBox) 
 
 function checkBox(){
      const trigger = window.innerHeight / 5 * 3.5
 
-     derp.forEach(box => {
-         const boxTop = box.getBoundingClientRect().top
-         if (boxTop < trigger) {
-             box.classList.add('show')
-         } else {
-             box.classList.remove('show')
-         }
-     })
- }
+    derp.each(function() {
+        let boxTop = this.getBoundingClientRect().top
 
- const inqBtn = document.querySelectorAll('.inquire')
- const modal = document.getElementById('modal-cont')
- const closeModal = document.getElementById('close-modal')
- const modalForm = document.querySelector('.modal')
 
-for (const btn of inqBtn) {
-    btn.addEventListener('click', () => {
-        modal.classList.add('showed')
-        document.body.style. overflowY = 'hidden'
+        if (boxTop < trigger) {
+            $(this).addClass('show')
+        } else {
+            $(this).removeClass('show')
+        }
+
     })
+
 }
 
-modal.addEventListener('click', function(e) {
-    if (e.target === modal) {
-        document.body.style. overflowY = '';
-        modal.classList.remove('showed')
+ const inqBtn = $('.inquire')
+ const modal = $('#modal-cont')
+ const closeModal = $('#close-modal')
+ const modalForm = $('.modal')
+
+inqBtn.each(function() {
+    $(this).click(function() {
+        modal.addClass('showed')
+        $(document).css('overflowY', 'hidden')
+    })
+})
+
+
+modal.click(function(e) {
+    if(e.target === modal) {
+        $(document).css('overflowY', '')
+        modal.addClass('showed')
     }
 })
 
- closeModal.addEventListener('click', () => {
-    modal.classList.remove('showed')
-    document.body.style. overflowY = '';
- })
-
+closeModal.click(function() {
+    modal.removeClass('showed')
+    $(document).css('overflowY', '')
+})
 
 
 // PHOTO CHOICE SELECT
 
-const photoChoices = document.querySelectorAll('.photo-choices')
+const photoChoices = $('.photo-choices')
 
-const mainPhoto = document.querySelectorAll('.main-photo-choice')
+const mainPhoto = $('.main-photo-choice')
+
 
 function pictureChoiceDisplay() {
-    for (photos of photoChoices) {
-        photos.addEventListener('mouseover', function(e) {
-            if (e.target.classList.contains('photo-choices')) {
-                var source = e.target.getAttribute('src')
-                var pic = e.target.parentElement.previousElementSibling
-                pic.style.backgroundImage = `url(${source})`
+    photoChoices.each(function() {
+        $(this).hover(function() {
+            if ($(this).hasClass('photo-choices')) {
+                var source = $(this).attr('src')
+                $(this.parentElement.previousElementSibling).css("background-image", `url(${source})`)
             }
         })
-    }
+    })
 }
 
 pictureChoiceDisplay()
 
 
-const slider = document.getElementById('miles-from-park')
-const sliderOut = document.getElementById('distance-amount')
+const slider = $('#miles-from-park')
+const sliderOut = $('#distance-amount')
 
 
-    slider.addEventListener('input', () => {
-        sliderOut.innerText = `${slider.value} miles`
+    slider.on('input', function() {
+        sliderOut.text(`${slider.val()} miles`)
     })
 
     // form validation
 
-    const contactEmail = document.getElementById('email')
-    const contactPhone = document.getElementById('phone')
-    const submitBtn = document.getElementById('submit-form')
-
-
-   
+    const contactEmail = $('#email')
+    const contactPhone = $('#phone')
+    const submitBtn = $('#submit-form')
 
     function mySubmitFunction(e) {
-        phoneNumber(contactPhone.value)
+        phoneNumber(contactPhone.val())
         e.preventDefault();
         alert('Please provide an Email and Phone Number.')
-       return false;
+        return false;
     }
 
     function phoneNumber(inputtxt) {
-  var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    var phoneno = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 
-  if(inputtxt.value.match(phoneno)) {
+  if(inputtxt.val().match(phoneno)) {
       return true;
         } else {
         return false;
         }
-}
+    }
 
-    submitBtn.addEventListener('click', (e) => {
+    submitBtn.on('click', function(e) {
             
            if (contactEmail.value === '' || contactPhone.value === '') {
                mySubmitFunction(e)
              }
-
-  
     })
 
