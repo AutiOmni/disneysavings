@@ -98,6 +98,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+   
 }
 
 .main-photo {
@@ -129,6 +130,9 @@ body {
     width: 100%;
     display: flex;
     overflow: hidden;
+    border: 1px solid #000;
+    border-top: none;
+    border-radius: 0px 0px 10px 10px;
 }
 
 .photo-choice-cont img {
@@ -136,14 +140,20 @@ body {
     object-position: center;
     height: 100px;
     width: 20%;
-    border: 1px solid #000;
+    border-left: 1px solid #000;
     cursor: pointer;
     overflow: hidden;
     transition: all ease-in-out 250ms;
 }
 
+.photo-choice-cont img:first-of-type {
+    border-left: none;
+}
+
 .photo-choice-cont img:hover {
-    transform: scale(1.2)
+    transform: scale(1.2);
+    border-right: 1px solid #000;
+
 }
 
 .first-choice {
@@ -696,14 +706,18 @@ footer :is(a,p) {
 
     .info-text {
         width: 100%;
+        text-align: center;
     }
 
     .info-text-condo {
         display: none;
+       
     }
 
     .info-text-condo-mobile {
         display: block;
+        width: 100%;
+        text-align: center;
     }
 
     .info-dump {
